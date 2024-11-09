@@ -90,7 +90,7 @@ const FlowBuilder = () => {
       </div>
 
       {/* Flow Canvas */}
-      <div className="flex-1 h-full w-[40%]" onDrop={onDrop} onDragOver={onDragOver}>
+      <div className="flex-1 h-full" onDrop={onDrop} onDragOver={onDragOver}>
         <ReactFlow
           nodes={nodes}
           edges={edges}
@@ -99,7 +99,7 @@ const FlowBuilder = () => {
           onConnect={onConnect}
           nodeTypes={nodeTypes}
           fitView
-          className="bg-gray-50"
+          className="bg-gray-50 w-5"
         >
           <Background color="#94a3b8" gap={16} size={1} />
           <Controls />
