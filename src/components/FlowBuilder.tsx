@@ -1,22 +1,22 @@
+import { Clock, GitBranch, Image, MessageSquare, Plus, Search } from 'lucide-react';
 import React, { useCallback } from 'react';
 import ReactFlow, { Background, Controls, NodeTypes } from 'reactflow';
-import { MessageSquare, Image, Clock, GitBranch, Search, Plus } from 'lucide-react';
+import 'reactflow/dist/style.css';
 import { useFlowStore } from '../store/flowStore';
 import CustomNode from './nodes/CustomNode';
-import 'reactflow/dist/style.css';
 
 const nodeTypes: NodeTypes = {
   custom: CustomNode,
 };
 
 const FlowBuilder = () => {
-  const { 
-    nodes, 
-    edges, 
-    onNodesChange, 
-    onEdgesChange, 
+  const {
+    nodes,
+    edges,
+    onNodesChange,
+    onEdgesChange,
     onConnect,
-    addNode 
+    addNode
   } = useFlowStore();
 
   const components = [
@@ -63,7 +63,7 @@ const FlowBuilder = () => {
           />
           <Search className="absolute left-3 top-3 text-gray-400" size={18} />
         </div>
-        
+
         <div className="mt-6 space-y-3">
           {components.map((component) => (
             <div
@@ -90,7 +90,7 @@ const FlowBuilder = () => {
       </div>
 
       {/* Flow Canvas */}
-      <div className="flex-1 h-full" onDrop={onDrop} onDragOver={onDragOver}>
+      <div className="flex-1 h-full w-[40%]" onDrop={onDrop} onDragOver={onDragOver}>
         <ReactFlow
           nodes={nodes}
           edges={edges}
