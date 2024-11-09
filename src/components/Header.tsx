@@ -1,5 +1,4 @@
-import React from 'react';
-import { Save, Play, Share2, Clock } from 'lucide-react';
+import { Clock } from 'lucide-react';
 
 const Header = () => {
   return (
@@ -19,7 +18,7 @@ const Header = () => {
       </div>
 
       <div className="flex items-center gap-3">
-        <button className="btn btn-secondary">
+        {/* <button className="btn btn-secondary">
           <Save size={18} className="mr-2" />
           Save
         </button>
@@ -30,7 +29,7 @@ const Header = () => {
         <button className="btn btn-primary">
           <Share2 size={18} className="mr-2" />
           Deploy
-        </button>
+        </button> */}
       </div>
     </header>
   );
